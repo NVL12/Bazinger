@@ -8,6 +8,8 @@ function showSlide(n) {
     var dots = document.getElementsByClassName("btn-dot-slide");
     if (n > slides.length) 
         slideIndex = 1;
+    if (n < 1) 
+        slideIndex = slides.length;
     var i;
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
